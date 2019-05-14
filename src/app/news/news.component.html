@@ -1,0 +1,16 @@
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <th>#</th>
+        <th>Articol</th>
+        <th>Picture</th>
+    </thead>
+    <tbody >
+      <tr *ngFor="let articol of data; let i = index; ">
+        <td>>{{i+1}}</td>
+        <td><a href={{articol.url}}>{{articol.title}}</a></td>
+        <td><img class="articolImage" src="{{articol.urlToImage}}" alt="image"></td>
+
+      </tr>
+    </tbody>
+</table>

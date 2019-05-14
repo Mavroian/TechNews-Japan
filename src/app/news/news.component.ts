@@ -24,12 +24,10 @@ export class NewsComponent implements OnInit {
     })
     
     const options = { params: httpParams, headers: headers };
-    console.log(headers)
 
     return this.http.get(this.apiUrl,options).subscribe(data=>{
       
       this.data = data["articles"]
-      console.log(this.data)
       
     })
   }

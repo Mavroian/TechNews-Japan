@@ -1,5 +1,5 @@
 
-<table class="table table-bordered table-hover">
+<!-- <table class="table table-bordered table-hover">
     <thead>
         <th>#</th>
         <th>Articol</th>
@@ -13,4 +13,16 @@
 
       </tr>
     </tbody>
-</table>
+</table> -->
+<div *ngFor="let articol of data; let i = index;"  class=" card article" style="width: 50rem; margin-left: 160px">
+
+   
+        <img class="card-img-top" src="{{articol.urlToImage}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" >{{articol.title}}</h5>
+          <p  style="color:gray">Published on :{{articol.publishedAt}}</p>
+          <p class="card-text" style="color:gray">{{articol.author}}</p>
+          <a href="{{articol.url}}" class="btn btn-primary">Read More {{articol.source.name}}</a>
+        </div>
+
+</div>

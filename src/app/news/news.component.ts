@@ -28,6 +28,7 @@ export class NewsComponent implements OnInit {
     return this.http.get(this.apiUrl,options).subscribe(data=>{
       
       this.data = data["articles"]
+      console.log(this.data)
       
     })
   }

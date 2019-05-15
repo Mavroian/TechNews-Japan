@@ -1,28 +1,11 @@
-
-<!-- <table class="table table-bordered table-hover">
-    <thead>
-        <th>#</th>
-        <th>Articol</th>
-        <th>Image</th>
-    </thead>
-    <tbody >
-      <tr *ngFor="let articol of data; let i = index; ">
-        <td>>{{i+1}}</td>
-        <td><a href={{articol.url}}>{{articol.title}}</a></td>
-        <td><img class="articolImage" src="{{articol.urlToImage}}" alt="image"></td>
-
-      </tr>
-    </tbody>
-</table> -->
 <div *ngFor="let articol of data; let i = index;"  class=" card article">
 
-   
-        <img class="card-img-top" src="{{articol.urlToImage}}" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title" >{{articol.title}}</h5>
-          <p  style="color:gray">Published on :{{articol.publishedAt}}</p>
-          <p class="card-text" style="color:gray">{{articol.author}}</p>
-          <a href="{{articol.url}}" class="btn btn-primary">Read More {{articol.source.name}}</a>
-        </div>
+  <img class="card-img-top" src="{{articol.urlToImage}}" alt="Card image cap">
+  <div class="card-body">
+  <h5 class="card-title" >{{articol.title}}</h5>
+  <p  style="color:gray">Published on : {{articol.publishedAt | date:'medium' }}</p>
+  <p class="card-text" style="color:gray">{{articol.author}}</p>
+  <a href="{{articol.url}}" class="btn btn-primary">Read More on {{articol.source.name}}</a>
+  </div>
 
 </div>
